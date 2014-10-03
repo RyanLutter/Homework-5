@@ -27,6 +27,10 @@
         
         <br /><br />
 
+        &nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnClear" runat="server" Text="Clear" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
         <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
         
         <br /><br />

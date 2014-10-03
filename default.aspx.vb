@@ -80,4 +80,10 @@ Partial Class _Default
 
     End Sub
 
+    Protected Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        'clear out the following text boxes
+        tbAnnualInterest.Text = ""
+        tbLoanAmt.Text = ""
+        tbLoanTerm.Text = ""
+    End Sub
 End Class
