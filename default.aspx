@@ -6,14 +6,14 @@
 <head runat="server">
     <title></title>
 
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
-    Mike's Mortgage Calculator
-        
-        <br /><br />
+        <span class="header">Mike&#39;s Massively Awesome Loan Calculator</span><br /><br />
      
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
                   
@@ -44,7 +44,7 @@
         
         <br /><br />
                 
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        Monthly Payment: &nbsp; <span class="header"><asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label></span>
         
         <br /><br />
         
