@@ -12,9 +12,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+
         <span class="header">Mike&#39;s Massively Awesome Loan Calculator</span><br /><br />
-     
+
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
                   
         &nbsp;&nbsp;
@@ -42,14 +42,19 @@
 
         <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
         
-        <br /><br />
-                
+        <br />
+          
+        <% If Not IsPostBack Then %>
+        <p> Welcome to my mortgage calculator. Please complete the field above to have your monthly payment and loan repayment schedule calculated for you.</p>
+        <% Else%>      
         Monthly Payment: &nbsp; <span class="header"><asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label></span>
         
         <br /><br />
         
         <asp:GridView ID="loanGridView" runat="server" />
-            
+        
+        <%End If%>
+           
         </div>
     </form>
 </body>
