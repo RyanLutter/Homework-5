@@ -1,6 +1,17 @@
 ﻿body {background-color: salmon;
 }
+
 .header {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.bold {
     font-size: large;
     font-weight: bolder;
+}
+
+.red {
+    color: #FF0000;
+    font-weight: bold;
 }
