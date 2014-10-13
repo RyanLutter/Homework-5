@@ -100,6 +100,11 @@ Partial Class _Default
         tbLoanTerm.Text = String.Empty
         lblMonthlyPmt.Text = String.Empty
 
+        'ensure the validators are not visible
+        rfv_AnnualInterest.Visible = False
+        rfv_LoanAmount.Visible = False
+        rfv_LoanTerm.Visible = False
+
         'ensure the gridview is not visible once cleared
         loanGridView.Visible = False
     End Sub

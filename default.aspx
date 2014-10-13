@@ -13,7 +13,7 @@
     <form id="form1" runat="server">
     <div>
 
-        <span class="header">Mike&#39;s Massively Awesome Loan Calculator<br /></span>
+        <span class="header">Ryan&#39;s Massively Awesome Loan Calculator<br /></span>
 
         <hr style="color: #FFFFFF" />
        
@@ -22,14 +22,16 @@
         Loan Amount: <span class="red">*</span> <asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
                   
         &nbsp;&nbsp;
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="rfv_loan">Please enter a loan amount.</asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="rfv_LoanAmount" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="rfv_loan">Please enter a loan amount.</asp:RequiredFieldValidator>
                   
         <br /><br />      
         
         Annual Interest %: <span class="red">*</span> <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
         
         &nbsp;&nbsp;
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="rfv_AnnualInterest">Please enter a annual interest rate.</asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="rfv_AnnualInterest" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="rfv_AnnualInterest">Please enter a annual interest rate.</asp:RequiredFieldValidator>
+        
+        <asp:RangeValidator ID="rv_AnnualInterest" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="Please enter an annual interest rate between 0-100%." MaximumValue="100" MinimumValue="0" Type="Double"></asp:RangeValidator>
         
         <br /><br />
 
@@ -61,9 +63,9 @@
         </span><br />
   
         <asp:GridView ID="loanGridView" runat="server" >
-            <RowStyle BackColor="white" />
-            <AlternatingRowStyle BackColor="aqua" />
-            <HeaderStyle BackColor="Black" ForeColor="White" Height="50px" HorizontalAlign="Center" VerticalAlign="Middle" Width="200px" />
+            <RowStyle BackColor="#00cc00" />
+            <AlternatingRowStyle BackColor="#FF7400" />
+            <HeaderStyle BackColor="#1240AB" ForeColor="White" Height="50px" HorizontalAlign="Center" VerticalAlign="Middle" Width="200px" />
             <RowStyle Height="40px" HorizontalAlign="Center" VerticalAlign="Middle" Width="400px" />
         </asp:GridView>
         
